@@ -9,9 +9,9 @@ module.exports = (env, args) => {
         plugins: [
             // ... 一些其他插件
             new UploadServer({
-                url: 'http://xxx.com/api/hot-update', // http://localhost:83/api/updateDist
+                url: 'http://xxx.com/api/hot-update', // http://localhost:83/api/hot-update
                 key: '123456',   // 作为后端的验证
-                exec: true, // 默认在生产模式下上传。若不想上传，可置为 false
+                exec: true, // 在生产模式下每次build后默认上传。若不想上传，可置为 false
             }),
         ],
         module: {
